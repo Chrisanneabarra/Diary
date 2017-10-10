@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+	<style>
+	.input{
+		height:200px;
+		width:75%;
+		font-size:50px;
+		text-align: center;
+		
+	}
+	</style>
+</head>
+<body background="C:\Users\Chrisanne\Desktop\Diary\www\img\images.jpg">
+<button onclick="back()" style="font-size: 50px; height:100;width:100;">Back</button>
+<script>
+	function back(){
+		window.history.back();
+
+	}
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+<button class='input' onclick='create();'>Create New</button>
+<script>
+	function create(){
+		location.href='create_new.html';
+	}
+</script>
+</body>
+</html>

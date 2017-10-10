@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create New</title>
+</head>
+<body onload="stay()">
+<button onclick="back() " style="font-size:50px; height:60px; width:125px;">Back</button>
+<script>
+	function back(){
+		window.history.back();
+	}
+</script>
+<br><br>
+<textarea id='text_data'  rows="10"; cols="85" style="font-size:20px;" ></textarea><br>
+<button onclick="save();" style="font-size: 50px; height:75px; width:125px;">save</button>
+<script type="text/javascript">
+	var count=0;
+
+	function save(){
+		count=parseInt(count)+parseInt(1);
+		var save=document.getElementById('text_data').value;
+		console.log(save);
+		localStorage.setItem(count,save);
+	}
+	function stay(){
+		var stayforever= localStorage.getItem("data");
+		console.log(stayforever);
+		if(stayforever){
+			document.getElementById('text_data').value = stayforever;
+		}
+	}
+	
+</script>
+</body>
+</html>
