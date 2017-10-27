@@ -3,7 +3,7 @@
 <head>
 	<title>Create New</title>
 </head>
-<body onload="stay()">
+<body onload="stay()" background="img\DDDD.jpg">
 <button onclick="back() " style="font-size:50px; height:60px; width:125px;">Back</button>
 <script>
 	function back(){
@@ -11,19 +11,19 @@
 	}
 </script>
 <br><br>
-<textarea id='text_data'  rows="10"; cols="85" style="font-size:20px;" ></textarea><br>
+<textarea id='text_data'  rows="10"; cols="85" style="font-size:20px;" ></textarea><br><br><br>
 <button onclick="save();" style="font-size: 50px; height:75px; width:125px;">save</button>
 <script type="text/javascript">
 	var count=0;
 
 	function save(){
-		count=parseInt(count)+parseInt(1);
+		count=parseInt(count)+parseInt(1);// for saving, looping
 		var save=document.getElementById('text_data').value;
 		console.log(save);
 		localStorage.setItem(count,save);
 	}
 	function stay(){
-		var stayforever= localStorage.getItem("data");
+		var stayforever= localStorage.getItem("data");//pagbinalikan mo anjan padin that's  we call true love haha
 		console.log(stayforever);
 		if(stayforever){
 			document.getElementById('text_data').value = stayforever;
